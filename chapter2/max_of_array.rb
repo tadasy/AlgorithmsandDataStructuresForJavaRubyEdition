@@ -1,8 +1,8 @@
 class MaxOfArray
   def self.maxof(array)
-    max = array.shift
-    array.each do |i|
-      max = i if i > max
+    max = array[0]
+    (1...array.size).each do |i|
+      max = array[i] if array[i] > max
     end
     max
   end
